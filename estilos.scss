@@ -1,0 +1,176 @@
+$colornegro:#0f0c29;
+$colorblanco:rgb(255, 255, 255);
+$colorazul:#181977;
+$colorfooter:rgb(51, 53, 146);
+$colorgris:rgb(201, 201, 201);
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: $colornegro;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+
+    
+
+    
+    
+}
+
+nav{
+    padding: 20px 0;
+}
+nav a{
+    text-decoration: none;
+    color: $colorblanco
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-decoration: none;
+    font-weight: 700;
+    color: $colorblanco;
+
+}
+    
+nav li{
+   border: 2px solid white;
+   padding: 8px 15px;
+   border-radius: 5px;
+
+    
+    
+}
+    
+
+   
+
+/*Hover botones*/
+
+nav li:hover{
+    box-shadow: inset 0 0 10px $colorgris 0 0 10px $colorgris;
+
+}
+
+
+/*Subitem*/
+nav ul ul{
+    position: absolute;
+    display: none;
+    background-color:$colorazul;
+    top: 40px;
+    
+    
+}
+ul li:hover ul{
+    display:block;
+}
+
+nav ul ul li{
+    display: block;
+    position: relative;
+    margin: 5px 50px 10px 50px;
+}
+
+/*Pagina principal*/
+
+.Principal .Banner  .Tienda  .Marcas  .Tecnico{
+display: flex;
+justify-content: center;
+width: 100%;
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+    margin: 50px 0;
+    color: $colorblanco;
+}
+footer{
+    text-align: center;
+  padding: 3px;
+  background-color: $colorazul;
+  color: $colorblanco;
+}
+/*productos*/
+h3{
+    text-align: center;
+}
+.Proces{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin: 2rem 0;
+   gap: 1rem;
+   justify-items: center;
+
+}
+
+.cuerpoTarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid $colorgris;
+    border-radius: 5px;
+    width: 20rem;
+    box-shadow: 0 0 5px $colorgris;
+}
+.Procesadores img {
+    width: 95%;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+.descripcion {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $colorblanco;
+}
+.descripcion a {
+    text-decoration: none;
+    border: 2px solid $colorblanco;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color:$colorazul;
+    color: $colorblanco;
+    font-weight: 700;
+    margin-top: 1rem;
+   
+}
+
+@media only screen and (max-width: 900px) {
+	
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    .Proces {
+        grid-template-columns: 1fr 1fr;
+       
+
+    }
+    .cuerpoTarjeta {
+        margin: 0 0.5rem;
+    }
+    footer h4 {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Proces {
+        grid-template-columns: 1fr;
+    }
+    nav ul, footer {
+		
+		flex-direction: column;
+        align-items: center;
+			
+	}
+}

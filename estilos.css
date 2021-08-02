@@ -1,0 +1,191 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #0f0c29;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#24243e), color-stop(#302b63), to(#0f0c29));
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav {
+  padding: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
+
+nav li {
+  border: 2px solid white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/*Hover botones*/
+nav li:hover {
+  -webkit-box-shadow: inset 0 0 10px #c9c9c9 0 0 10px #c9c9c9;
+          box-shadow: inset 0 0 10px #c9c9c9 0 0 10px #c9c9c9;
+}
+
+/*Subitem*/
+nav ul ul {
+  position: absolute;
+  display: none;
+  background-color: #181977;
+  top: 40px;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+nav ul ul li {
+  display: block;
+  position: relative;
+  margin: 5px 50px 10px 50px;
+}
+
+/*Pagina principal*/
+.Principal .Banner .Tienda .Marcas .Tecnico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  margin: 50px 0;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #181977;
+  color: white;
+}
+
+/*productos*/
+h3 {
+  text-align: center;
+}
+
+.Proces {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.cuerpoTarjeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 2px solid #c9c9c9;
+  border-radius: 5px;
+  width: 20rem;
+  -webkit-box-shadow: 0 0 5px #c9c9c9;
+          box-shadow: 0 0 5px #c9c9c9;
+}
+
+.Procesadores img {
+  width: 95%;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.descripcion {
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.descripcion a {
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #181977;
+  color: white;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  .Proces {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .cuerpoTarjeta {
+    margin: 0 0.5rem;
+  }
+  footer h4 {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Proces {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  nav ul, footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
